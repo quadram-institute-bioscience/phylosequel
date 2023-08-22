@@ -22,8 +22,8 @@ def test_check_packages(required_packages):
             try:
                 required_version = package_name[1]
                 module = importlib.import_module(package)
-                installed_version = metadata.version(package)
-            
+                installed_version = metadata.version(module.__name__)
+                print(installed_version)
                 if packaging_version.parse(installed_version) >= packaging_version.parse(required_version):
                     print(f"Package '{package}' successfully imported.")
                     print(f"{package}\tinstalled-version: {installed_version} >= required-version: {required_version}")
