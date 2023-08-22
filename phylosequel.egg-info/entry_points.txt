@@ -1,6 +1,0 @@
-[console_scripts]
-__init__ = scripts.__init__:main
-_version = scripts._version:main
-hellllo = scripts.hellllo:main
-listSamples = scripts.listSamples:main
-phyloseq = scripts.phyloseq:main
