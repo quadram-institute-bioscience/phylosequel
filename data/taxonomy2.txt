@@ -1,0 +1,12 @@
+Taxonomy	Taxonomy
+Bacteria	Bacteria
+B	Bacteria;Firmicutes
+C	Bacteria;Firmicutes;Clostridia
+D	Bacteria;Firmicutes;Clostridia;Eubacteriales
+E	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae
+F	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Mediterraneibacter
+G	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Mediterraneibacter;[Ruminococcus] gnavus
+H	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Mediterraneibacter;[Ruminococcus] torques
+I	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Blautia
+J	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Blautia;Blautia massiliensis
+K	Bacteria;Firmicutes;Clostridia;Eubacteriales;Lachnospiraceae;Blautia;Blautia obeum
