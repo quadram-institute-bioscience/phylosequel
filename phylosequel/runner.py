@@ -15,7 +15,7 @@ def run_phyloseq(file_path, tree_flag, fname):
     
     # Try running the Rscript
     try:
-        print("   \u23F3 cmd:",command)
+        print("   \u23F3 cmd:", command)
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:
         print("   \u2717 Error: Running Phyloseq", e)

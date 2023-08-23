@@ -191,42 +191,12 @@ def main():
             sys.exit(1)
         
         shutil.copy(args.phylogeny, f"{args.output}/files/phylogeny.nwk")
+    
+    print("S5. Running R-phyloseq")
+    runner.run_phyloseq(f"{args.output}/files", tree_flag, args.name)
+    print(f"S7. Output files: {args.output}/files")
 
-    return f"{args.output}/files", tree_flag, args.name
+    return
 
 if __name__ == "__main__":
-    file_path, tree_flag, fname = main()
-    print("S5. Running R-phyloseq")
-    runner.run_phyloseq(file_path, tree_flag, fname)
-    print(f"S7. Output files: {file_path}")
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-
-
-            
-
-
-
-    
-
-
-
-
-
-
+    main()

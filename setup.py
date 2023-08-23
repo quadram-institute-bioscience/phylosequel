@@ -1,10 +1,9 @@
 from setuptools import setup
-from setuptools.command.install import install
 import os
 import subprocess
+import logging
 
 def get_scripts():
-    #['hellllow = scripts:hellllow:main']
     scripts = []
     for dirpath, dirnames, filenames in os.walk('scripts'):
         for filename in filenames:
@@ -14,21 +13,24 @@ def get_scripts():
     return scripts
 
 def execute_installing_r_packages():
-    r_script_path = os.path.join("envs", "R-package", "install_r_package.R")
+    r_script_path = "envs/R/install_r_package.R"
     if os.path.exists(r_script_path):
-        print("Installing R packages...")
-        subprocess.run(['Rscript', r_script_path], check=True)
-        print("R packages installed successfully.")
+        logging.info("Installing R packages...")
+        try:
+            subprocess.run(['Rscript', r_script_path], check=True)
+            logging.info("R packages installed successfully.")
+        except subprocess.CalledProcessError as e:
+            logging.error(f"Error installing R packages: {e}")
     else:
-        print(f"R script not found at path: {r_script_path}")
+        logging.warning(f"R script not found at path: {r_script_path}")
+    return
 
 if __name__ == "__main__":
-
+    logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+    #Installing R
+    execute_installing_r_packages()
+    
     console_scripts = get_scripts()  
     setup(entry_points=dict(
-
-            console_scripts=console_scripts
+        console_scripts=console_scripts
     ))
-    #Install R-packages
-    execute_installing_r_packages()
-
