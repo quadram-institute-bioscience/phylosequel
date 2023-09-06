@@ -1,5 +1,5 @@
 from setuptools import setup
-import os
+import os, sys
 import subprocess
 import logging
 
@@ -21,6 +21,7 @@ def execute_installing_r_packages():
             logging.info("R packages installed successfully.")
         except subprocess.CalledProcessError as e:
             logging.error(f"Error installing R packages: {e}")
+            sys.exit(1)  # Exit the script with a non-zero status code
     else:
         logging.warning(f"R script not found at path: {r_script_path}")
     return
