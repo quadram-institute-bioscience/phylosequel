@@ -2,7 +2,7 @@
 #dir.create("./packages") # Create a local directort for R pacakagesx
 #Sys.setenv("PKG_CPPFLAGS"="-I/usr/include/libxml2 -I/opt/miniconda3/include/libxml2/libxml")
 
-packages_to_install = c("httr", "ape", "optparse", "xml2", "BiocManager", "jsonlite")
+packages_to_install = c("ape", "optparse", "xml2", "BiocManager", "jsonlite")
 
 for (pkg in packages_to_install) {
   tryCatch({
