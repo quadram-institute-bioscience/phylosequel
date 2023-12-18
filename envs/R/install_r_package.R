@@ -1,7 +1,8 @@
 # install_r_package.R
-#dir.create("./packages") # Create a local directort for R pacakagesx
-#Sys.setenv("PKG_CPPFLAGS"="-I/usr/include/libxml2 -I/opt/miniconda3/include/libxml2/libxml")
+# Scripts to install the R-packages.
+# Requires R>=4.1.2
 
+# R-packages to install
 packages_to_install = c("ape", "optparse", "xml2", "BiocManager", "jsonlite")
 
 for (pkg in packages_to_install) {
@@ -16,6 +17,7 @@ for (pkg in packages_to_install) {
     })
 }
 
+# R-Bioconductor packages to install
 biocmanager_to_install = c("annotate", "genefilter", "phyloseq")
 for (pkg in biocmanager_to_install) {
 tryCatch({
