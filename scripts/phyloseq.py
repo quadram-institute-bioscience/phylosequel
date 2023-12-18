@@ -60,7 +60,14 @@ def arguments():
 def main():
     """Main function for formating files for phyloseq object from input files."""
     args = arguments()
+
+    # Set R-package path
+    rconfig = os.path.join(os.path.dirname(__file__), 'rconfig.txt')
+    with open(rconfig, 'r') as f:
+        rlib_path = f.read().strip()
+    os.environ['R_LIBS_USER'] = rlib_path
     print("S1. Parsing input files") 
+    
     # 1) Metdata
     ## Parse metadata
     metadata = checks.parse_table(args.metadata)
