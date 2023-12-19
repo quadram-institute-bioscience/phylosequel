@@ -1,5 +1,5 @@
 # Phylosequel
-A python package to create a [phyloseq]{https://joey711.github.io/phyloseq/} object. The phyloseq object typically consit of:
+A python package to create a {https://joey711.github.io/phyloseq/}[phyloseq] object. The phyloseq object typically consit of:
 1. OTUs Abundance table.
 2. Taxonomy table.
 3. Metadata file.
