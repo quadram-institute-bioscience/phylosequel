@@ -14,17 +14,17 @@ def get_scripts():
 
 def execute_installing_r_packages():
     # Create R package library directory if it doesn't exist
-    r_library = os.path.expanduser("~/R/library")
+    '''r_library = os.path.expanduser("~/R/library")
     if not os.path.exists(r_library):
         os.makedirs(r_library)  
     
     # Set the environment variable
-    os.environ['R_LIBS_USER'] = r_library
+    #os.environ['R_LIBS_USER'] = r_library
     
     #write R-library path to a file
     with open('scripts/rconfig.txt', 'w') as f:
         f.write(r_library)
-    
+    '''
     # Path to script to Install-R-packages 
     r_script_path = "envs/R/install_r_package.R"
     if os.path.exists(r_script_path):
