@@ -45,3 +45,30 @@ The inputs are stored in `data` directory.
 ```
 phylosequel -a data/abundance_wo_taxa.txt -m data/metadata.csv -p data/phylogeny.nwk -t data/taxonomy.txt -o test_phylo -n phyloseqObj
 ```
+
+**Expect output**
+On successful run the following log will be generated on the terminal.
+
+```
+STEP: Parsing input files
+   ✓ metadata.csv parsed successfully
+   ✓ abundance_wo_taxa.txt parsed successfully
+   ✓ taxonomy.txt parsed successfully
+STEP: Checking files
+   ✓ OTUs/species names matched b/w abundnace and taxonomy
+   ✓ Sample matched b/w metadata and abundance tables
+Directory 'test_phylo' already exists.
+Directory 'test_phylo/files' already exists.
+STEP: Parsing Phylogeny
+   ✓ phylogeny.nwk parsed successfully
+STEP: Checking files
+   ✓ Samples matched b/w phylogeny & metadata
+STEP: Running R-phyloseq
+   ⏳ cmd: Rscript phyloseq.R -m test_phylo/files/metadata.csv -a test_phylo/files/abundance.txt -t test_phylo/files/taxonomy.txt -p test_phylo/files/phylogeny.nwk -o test_phylo/files/test_phylo
+   ✔ Successfully created phyloseq object test_phylo/files/test_phylo.rds 
+S6. Checking Phyloseq Object
+   ✔ All samples found in test_phylo/files/test_phylo.rds 
+   ✔ All Taxon/OTUs found in test_phylo/files/test_phylo.rds 
+   ✔ All tips found in test_phylo/files/test_phylo.rds 
+STEP: Output files: test_phylo/files
+```

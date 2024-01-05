@@ -70,6 +70,7 @@ def main():
 
     # 1) Metdata
     ## Parse metadata
+    print("STEP: Parsing input files")
     metadata = checks.parse_table(args.metadata)
 
     ## Initialize a taxonomy dataframe 
@@ -82,7 +83,7 @@ def main():
         
         lineage = checks.parse_table(args.taxonomy) ## Parse taxonomy from file.
         c1 = checks.count_str(lineage) # dictionary c1[colname]=counts
-        print("S2. Checking files")
+        print("STEP: Checking files")
         if len(c1) == 2:
             ## if len == 2 means taxonomy file consist of two columns
             ## Expecting one column is names/otus and another corresponding taxonomy.
@@ -118,7 +119,7 @@ def main():
             ## Sometime names and taxonomy both are there within the abundance file.
         abundance = checks.parse_table(args.abundance)
         c1 = checks.count_str(abundance) # Count the ";" for identifying lineage columns
-        print("S2. Checking files")
+        print("STEP: Checking files")
         if len(c1) == 1:
             for key, value in c1.items():
                 if value > 0:
@@ -155,7 +156,7 @@ def main():
         check.add(c)
     
     if any(check):
-        print("Sample matched b/w metadata and abundance tables")
+        print("   \u2713 Sample matched b/w metadata and abundance tables")
     else:
         metadata = metadata.T
         metadata.reset_index(inplace=True)
@@ -185,12 +186,12 @@ def main():
 
     tree_flag = False
     if args.phylogeny:
-        print("S3. Parsing Phylogeny")
+        print("STEP: Parsing Phylogeny")
         tree_flag = True
         clade_names = checks.parse_phylogeny(args.phylogeny)
         clades = set(clade_names)
         c = checks.check_samples(clades, abundance[abundance.columns[0]])
-        print("S4. Checking files")
+        print("STEP: Checking files")
         if c==True:
             print("   \u2713 Samples matched b/w phylogeny & metadata")
         else:
@@ -199,9 +200,9 @@ def main():
         
         shutil.copy(args.phylogeny, f"{args.output}/files/phylogeny.nwk")
     
-    print("S5. Running R-phyloseq")
+    print("STEP: Running R-phyloseq")
     runner.run_phyloseq(f"{args.output}/files", tree_flag, args.name)
-    print(f"S7. Output files: {args.output}/files")
+    print(f"STEP: Output files: {args.output}/files")
 
     return
 
