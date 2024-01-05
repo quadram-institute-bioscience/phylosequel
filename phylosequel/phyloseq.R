@@ -81,7 +81,7 @@ if (class(loadObj) == "phyloseq"){
 } else {
   cat("   \u2718 Failed to create the phyloseq object\n")
 }
-cat("S6. Checking Phyloseq Object\n")
+cat("STEP: Checking Phyloseq Object\n")
 
 # Compare the phyloseq object with input files.
 ## 1. Sample names

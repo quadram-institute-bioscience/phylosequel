@@ -66,7 +66,7 @@ STEP: Checking files
 STEP: Running R-phyloseq
    ⏳ cmd: Rscript phyloseq.R -m test_phylo/files/metadata.csv -a test_phylo/files/abundance.txt -t test_phylo/files/taxonomy.txt -p test_phylo/files/phylogeny.nwk -o test_phylo/files/test_phylo
    ✔ Successfully created phyloseq object test_phylo/files/test_phylo.rds 
-S6. Checking Phyloseq Object
+STEP: Checking Phyloseq Object
    ✔ All samples found in test_phylo/files/test_phylo.rds 
    ✔ All Taxon/OTUs found in test_phylo/files/test_phylo.rds 
    ✔ All tips found in test_phylo/files/test_phylo.rds 
