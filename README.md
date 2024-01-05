@@ -18,10 +18,6 @@ sudo apt-get install libcurl4-openssl-dev
 ```
 Step1: git clone https://github.com/quadram-institute-bioscience/phylosequel.git
 Step2: pip install ./phylosequel or pip install --user ./phylosequel
-```
-If the the following warning shows up while running the Step2.
-`Defaulting to user installation because normal site-packages is not writeable`
-Then run export the path of the bin.
-```
-Step3: export PATH="/user_path_to/Library/Python/3.8/bin:$PATH"
+echo 'export PATH="/user_path_to/Library/Python/3.8/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 ```
