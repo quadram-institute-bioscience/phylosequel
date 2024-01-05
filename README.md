@@ -47,7 +47,7 @@ phylosequel -a data/abundance_wo_taxa.txt -m data/metadata.csv -p data/phylogeny
 ```
 
 **Expect output**
-On successful run the following log will be generated on the terminal.
+On successful run the following log will be generated on the terminal. The phyloseq object will be save as `*.rds`
 
 ```
 STEP: Parsing input files
