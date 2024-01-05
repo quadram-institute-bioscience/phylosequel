@@ -1,0 +1,12 @@
+Name	Domain	Phylum	Class	Order	Family	Genus	Species
+Bacteria	Bacteria	NA	NA	NA	NA	NA	NA
+Firmicutes	Bacteria	Firmicutes	NA	NA	NA	NA	NA
+Clostridia	Bacteria	Firmicutes	Clostridia	NA	NA	NA	NA
+Eubacteriales	Bacteria	Firmicutes	Clostridia	Eubacteriales	NA	NA	NA
+Lachnospiraceae	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	NA	NA
+Mediterraneibacter	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Mediterraneibacter	NA
+[Ruminococcus] gnavus	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Mediterraneibacter	[Ruminococcus] gnavus
+[Ruminococcus] torques	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Mediterraneibacter	[Ruminococcus] torques
+Blautia	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Blautia	NA
+Blautia massiliensis	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Blautia	Blautia massiliensis
+Blautia obeum	Bacteria	Firmicutes	Clostridia	Eubacteriales	Lachnospiraceae	Blautia	Blautia obeum
