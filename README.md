@@ -18,6 +18,6 @@ sudo apt-get install libcurl4-openssl-dev
 ```
 Step1: git clone https://github.com/quadram-institute-bioscience/phylosequel.git
 Step2: pip install ./phylosequel or pip install --user ./phylosequel
-echo 'export PATH="/user_path_to/Library/Python/3.8/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+Step3: echo 'export PATH="/user_path_to/Library/Python/3.8/bin:$PATH"' >> ~/.bash_profile
+Step4: source ~/.bash_profile
 ```
