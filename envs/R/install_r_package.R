@@ -8,7 +8,7 @@ packages_to_install = c("ape", "optparse", "xml2", "BiocManager", "jsonlite")
 for (pkg in packages_to_install) {
   tryCatch({
     if (!requireNamespace(pkg, quietly = TRUE)) {
-        install.packages(pkg, dependencies = TRUE, force = TRUE)
+        install.packages(pkg, dependencies = TRUE, force = TRUE, repos="https://cran.rstudio.com/")
     }
   }, error = function(e) {
       message(paste("Error: Failed to install '", pkg, "'."))
